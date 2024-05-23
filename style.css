@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container {
+    background-image: url(img/marvel-disney-plus-7c.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    
+}
+
+/*eu deixo relative nas divs para poder mexer nelas quando o container::before colocar a camada por cima, se eu nao tiver o position nas divs, a camada preta vai ficar por cima*/
+
+.container::before {
+    content: '';
+    background-color: rgb(0, 0, 0, .5);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+
+.topo {
+    display: flex;
+    height: 50px;
+    justify-content: flex-end;
+    padding: 15px;
+    margin-right: 20px;
+    position: relative;
+}
+
+/*botao do topo*/
+.botao button {
+    color: white;
+    background-color:rgba(36, 36, 36, 0.272) ;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 10px;
+    margin-right: 20px;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    
+}
+/*botao topo, quando passar o mouse tem uma animação*/ 
+.botao button:hover {
+
+    background-color:rgba(255, 255, 255, 0.272) ;
+
+} 
+
+/*imagem*1*/
+
+.abaixodotopo {
+    height: 300px;
+    margin-top: 120px;
+    margin-left: 40px;
+    color: white;
+    width: 500px;
+    position: relative;
+
+}   
+
+.imagem img{
+    height: 110px;
+}
+
+/*texto falando sobre historias*/
+#textohistorias {
+    font-size: 28px
+}
+
+.meio {
+    margin-left: 40px;
+    width: 800px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/*botão teste gratis*/
+.meio button {
+    margin-top: 30px;
+    color: white;
+    background-color:rgb(35, 86, 228);
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    height: 60px;
+    width: 350px;
+    cursor: pointer;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.meio button:hover{
+   background-color: rgb(53, 105, 247) ;
+}
+
+/*Texto span sobre a oferta do site*/
+.textooferta {
+    color: rgb(215, 215, 215);
+    font-size: 12px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+
+/*rodapé do site*/
+.footer {
+    height: 200px;
+    display: flex;
+    justify-content: flex-start ;
+    align-items: flex-end;
+    bottom: 0;
+    position: relative;
+}
+.footer img {
+    height: 150px;
+    margin-left: 40px;
+}
